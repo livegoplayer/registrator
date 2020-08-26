@@ -9,6 +9,6 @@ services:
          RESTY_CONFIG_OPTIONS_MORE: "--with-echo_nginx_module"
       volumes:
          - /var/run/docker.sock:/tmp/docker.sock
-      command: consul://localhost:8500
+      command: consul://localhost:8500 -ip="127.0.0.1"
       network_mode: host
       
